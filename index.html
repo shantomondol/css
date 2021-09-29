@@ -5,59 +5,135 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Copy Text</title>
+    <title>Copy CSS</title>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- css -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 </head>
 
-<body>
+<style>
+    body {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(works.gif);
+        background-size: cover;
+        background-attachment: fixed;
+        color: #fff;
+    }
+    
+    h1 {
+        text-align: center;
+        margin-top: 300px;
+    }
+    
+    .wrapper {
+        display: inline-flex;
+    }
+    
+    .wrapper .icon {
+        margin: 70px 15px 10px 0;
+        text-align: center;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        position: relative;
+        transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+    
+    .wrapper .icon span {
+        display: block;
+        height: 60px;
+        width: 60px;
+        color: #fff;
+        background: rgb(0, 0, 0);
+        border-radius: 50%;
+        position: relative;
+        box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+        transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+    
+    .wrapper .icon span i {
+        line-height: 60px;
+        font-size: 25px;
+    }
+    
+    .wrapper .icon .tooltip {
+        width: 250px;
+        position: absolute;
+        top: 0;
+        z-index: 1;
+        background: #fff;
+        color: #fff;
+        padding: 10px 18px;
+        font-size: 20px;
+        font-weight: 500;
+        border-radius: 25px;
+        opacity: 0;
+        pointer-events: none;
+        box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+        transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+    
+    .wrapper .icon:hover .tooltip {
+        top: -70px;
+        opacity: 1;
+        pointer-events: auto;
+    }
+    
+    .icon .tooltip:before {
+        position: absolute;
+        content: "";
+        height: 15px;
+        width: 15px;
+        background: #fff;
+        left: 50%;
+        bottom: -6px;
+        transform: translateX(-50%) rotate(45deg);
+        transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+    
+    .wrapper .icon:hover span {
+        color: #fff;
+    }
+    
+    .wrapper .icon:hover span,
+    .wrapper .icon:hover .tooltip {
+        text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.4);
+    }
+    
+    .wrapper .web:hover span,
+    .wrapper .web:hover .tooltip,
+    .wrapper .web:hover .tooltip:before {
+        background: #3B5999;
+    }
+    
+    @media (max-width: 768px) {
+        body {
+            background-size: contain;
+        }
+    }
+</style>
 
-    <div class="container">
-        <h4>Easy tutorial</h4>
-        <div class="row">
-            <div class="col m6 s12">
-                <div class="card">
-                    <div class="card-content" id="content">
-                        &lt;l!DOCTYPE html &gt;<br> &lt;html&gt;
-                        <br> &lt;head&gt;
-                        <br> &nbsp;&nbsp;&lt;title&gt; my website &lt;/title&gt;
-                        <br> &lt;/head&gt;
-                        <br> &lt;body&gt;
-                        <br> &nbsp;&nbsp;&nbsp;&lt;h2&gt; Oston code cypher &lt;/h2&gt;
-                        <br> &lt;/body&gt;
-                        <br> &lt;/html &gt;
-                    </div>
-                    <div class="card-action">
-                        <button class="btn" data-clipboard-target="#content">copy code</button>
-                    </div>
+<body>
+    <h1>this repository create for my library elements. <br>create some interesting <br>
+        <div class="wrapper">
+            <div class="icon web">
+                <div class="tooltip">
+                    Shorif Imtaz Website
                 </div>
+                <a href="shorif vai/index.html" target="_blank"><span><i class="fas fa-globe"></i></span></a>
+            </div>
+            <div class="icon web">
+                <div class="tooltip">
+                    Buttton
+                </div>
+                <a href="sm-btn-6/index.html" target="_blank"><span><i class="fas fa-globe"></i></span></a>
             </div>
         </div>
-    </div>
-
-
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
-
-    <script>
-        var clipboard = new ClipboardJS(".btn");
-        clipboard.on('success', function() {
-            M.toast({
-                html: "copied successfully",
-                classes: "rounded green"
-            });
-        });
-        clipboard.on('error', function() {
-            M.toast({
-                html: "copy action failed",
-                classes: "rounded red"
-            });
-        });
-    </script>
-
-
-
+    </h1>
 </body>
 
 </html>

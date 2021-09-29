@@ -1,0 +1,157 @@
+/* Google Font CDN Link */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    background: #fdfcfc;
+}
+
+.text-boxes {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 30px;
+    margin-bottom: 60px;
+}
+
+.text-boxes .text-box {
+    height: 380px;
+    max-width: 660px;
+    width: 100%;
+    margin: 55px 0;
+}
+
+.text-boxes .text-box .topic {
+    font-size: 18px;
+    font-weight: 600;
+    color: #265df2;
+    margin: 4px;
+}
+
+.text-boxes .text-box textarea {
+    height: 100%;
+    width: 100%;
+    padding: 30px;
+    font-size: 15px;
+    font-weight: 400;
+    outline: none;
+    border: 1px solid #265df2;
+    border-radius: 8px;
+    background: #e7edfe;
+    white-space: pre;
+}
+
+.text-box textarea::-webkit-scrollbar {
+    display: none;
+}
+
+.text-boxes .text-box button {
+    height: 45px;
+    width: 155px;
+    color: #fff;
+    background: #265df2;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    font-size: 17px;
+    font-weight: 400;
+    margin: 8px 0;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.text-boxes .text-box button:hover {
+    background: #0e4bf1;
+}
+
+@media (max-width: 400px) {
+    .text-boxes .text-box button {
+        width: 100%;
+    }
+}
+
+
+/*======================================
+*           download btn              *
+======================================*/
+
+h1 {
+    margin-top: 80px;
+    border-bottom: 1px dashed #000;
+}
+
+.fa-angle-double-down {
+    font-size: 40px;
+}
+
+.download-btn {
+    position: relative;
+    background: #4285F4;
+    color: #fff;
+    width: 260px;
+    padding: 18px 0;
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: 400;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
+    transition: background 0.3s ease;
+}
+
+.download-btn:hover {
+    background: #2874F3;
+}
+
+.download-btn i {
+    margin-left: 5px;
+}
+
+.countdown {
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.countdown span {
+    color: #0693F6;
+    font-size: 1.5em;
+    font-weight: 800;
+}
+
+.pleaseWait-text {
+    font-size: 1.1em;
+    font-weight: 600;
+    display: none;
+}
+
+.manualDownload-text {
+    font-size: 1.1em;
+    font-weight: 600;
+    display: none;
+}
+
+.manualDownload-link {
+    color: #0693F6;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+footer {
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(0, 0, 0);
+    padding: 30px 0;        
+    text-align: center;
+}
